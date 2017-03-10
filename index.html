@@ -17,11 +17,15 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     
     <!--MediaElement.js-->
-    <script src="https://cdn.jsdelivr.net/mediaelement/latest/mediaelement-and-player.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/mediaelement/latest/mediaelementplayer.css" rel="stylesheet">
+    <script src="mejs/mediaelement-and-player.min.js"></script>
+    <link href="mejs/mediaelementplayer.css" rel="stylesheet">
+    
+    <!--app.js-->
+    <script src="js/app.js"></script>
     
     <!--main css-->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mejs-sd.css">
     
   </head>
   
@@ -30,7 +34,7 @@
     <div class="wrapper">
       
       <div class="video-container">
-        <video class="mejs__player video" width="852" height="480">
+        <video class="mejs-sd video" width="852" height="480">
           <source src="videos/video-min.mp4" type="video/mp4"/>
           <source src="videos/video.ogg" type="video/ogg" />
         </video>
@@ -39,28 +43,28 @@
       <div class="transcript-container">
         
         <p>
-          <span id="cap1">Now that we've looked at the architecture of the internet, let's see how you might</span>
-          <span id="cap2">connect your personal devices to the internet inside your house. </span>
-          <span id="cap3">Well there are many ways to connect to the internet, and </span>
-          <span id="cap4">most often people connect wirelessly. </span>
+          <span id="cap-1" class="">Now that we've looked at the architecture of the internet, let's see how you might</span>
+          <span id="cap-2">connect your personal devices to the internet inside your house. </span>
+          <span id="cap-3">Well there are many ways to connect to the internet, and </span>
+          <span id="cap-4">most often people connect wirelessly. </span>
         </p>
         
         <p>
-          <span id="cap5">Let's look at an example of how you can connect to the internet. </span>
-          <span id="cap6">If you live in a city or a town, you probably have a coaxial cable for </span>
-          <span id="cap7">cable internet, or a phone line if you have DSL, running to the outside of </span>
-          <span id="cap8">your house, that connects you to the Internet Service Provider or ISP. </span>
-          <span id="cap9">If you live far out in the country, you'll more likely have </span>
-          <span id="cap10">a dish outside your house, connecting you wirelessly to your closest IPS, or </span>
-          <span id="cap11">you might also use the telephone system. </span>
+          <span id="cap-5">Let's look at an example of how you can connect to the internet. </span>
+          <span id="cap-6">If you live in a city or a town, you probably have a coaxial cable for </span>
+          <span id="cap-7">cable internet, or a phone line if you have DSL, running to the outside of </span>
+          <span id="cap-8">your house, that connects you to the Internet Service Provider or ISP. </span>
+          <span id="cap-9">If you live far out in the country, you'll more likely have </span>
+          <span id="cap-10">a dish outside your house, connecting you wirelessly to your closest IPS, or </span>
+          <span id="cap-11">you might also use the telephone system. </span>
         </p>
         
         <p>
-          <span id="cap12">Whether a wire comes straight from the ISP hookup outside your house, or </span>
-          <span id="cap13">it travels over radio waves from your roof, </span>
-          <span id="cap14">the first stop a wire will make once inside your hosue, is at your modem. </span>
-          <span id="cap15">A modem is what connects the internet to your network at home. </span>
-          <span id="cap16">A few common residential modems are DSL or</span>
+          <span id="cap-12">Whether a wire comes straight from the ISP hookup outside your house, or </span>
+          <span id="cap-13">it travels over radio waves from your roof, </span>
+          <span id="cap-14">the first stop a wire will make once inside your house, is at your modem. </span>
+          <span id="cap-15">A modem is what connects the internet to your network at home. </span>
+          <span id="cap-16">A few common residential modems are DSL or</span>
         </p>
         
       </div> <!--end .transcript-container-->

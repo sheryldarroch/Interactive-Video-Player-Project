@@ -10,16 +10,28 @@ body {
   background: #f4f4f4;
 }
 
+.wrapper {
+  margin: 0;
+  background: #fff;
+}
 .transcript-container p {
   line-height: 1.75em;
   color: #384047;
   padding: 0 20px;
+
 }
 
 .video {
   max-width: 100%;
 }
 
+.highlighted {
+  background: yellow;
+}
 
 @media screen and (min-width: 768px) {
-
+  .wrapper {
+    width: 80%;
+    margin: 20px auto;
+  }
+}

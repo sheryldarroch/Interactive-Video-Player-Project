@@ -1,0 +1,28 @@
+/*Custom sd Skin*/
+
+.mejs-container.mejs-sd {
+
+}
+
+/*controls*/
+.mejs-sd .mejs-controls {
+  background: #e87cbb;
+  height: 35px;
+}
+
+/*time*/
+.mejs-sd .mejs-controls .mejs-time,
+.mejs-sd .mejs-controls .mejs-time span {
+  color: #5c62f5;
+  text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+}
+
+/*time loaded*/
+.mejs-sd .mejs-time-rail .mejs-time-loaded {
+  background: #ffd4cb;
+}
+
+/*current time*/
+.mejs-sd .mejs-time-rail .mejs-time-current {
+  background: #5c62f5;
+}
