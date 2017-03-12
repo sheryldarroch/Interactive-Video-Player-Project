@@ -20,11 +20,10 @@
     <script src="mejs/mediaelement-and-player.min.js"></script>
     <link href="mejs/mediaelementplayer.css" rel="stylesheet">
     
-    <!--app.js-->
-    <script src="js/app.js"></script>
-    
     <!--main css-->
     <link rel="stylesheet" href="css/main.css">
+    
+    <!--custom skin css-->
     <link rel="stylesheet" href="css/mejs-sd.css">
     
   </head>
@@ -34,7 +33,7 @@
     <div class="wrapper">
       
       <div class="video-container">
-        <video class="mejs-sd video" width="852" height="480">
+        <video class="mejs-sd video" id="video" width="852" height="480">
           <source src="videos/video-min.mp4" type="video/mp4"/>
           <source src="videos/video.ogg" type="video/ogg" />
         </video>
@@ -43,7 +42,7 @@
       <div class="transcript-container">
         
         <p>
-          <span id="cap-1" class="">Now that we've looked at the architecture of the internet, let's see how you might</span>
+          <span id="cap-1">Now that we've looked at the architecture of the internet, let's see how you might</span>
           <span id="cap-2">connect your personal devices to the internet inside your house. </span>
           <span id="cap-3">Well there are many ways to connect to the internet, and </span>
           <span id="cap-4">most often people connect wirelessly. </span>
@@ -70,10 +69,14 @@
       </div> <!--end .transcript-container-->
     
     </div>
-    
+   
+    <!--call mediaelement-->
     <script>
       $('video').mediaelementplayer();
     </script>
+    
+    <!--app.js-->
+    <script src="js/app.js"></script>   
     
   </body>
 

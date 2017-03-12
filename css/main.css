@@ -25,13 +25,9 @@ body {
   max-width: 100%;
 }
 
-.highlighted {
-  background: yellow;
-}
-
 @media screen and (min-width: 768px) {
   .wrapper {
-    width: 80%;
+    width: 50%;
     margin: 20px auto;
   }
 }

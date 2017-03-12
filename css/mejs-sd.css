@@ -7,7 +7,7 @@
 /*controls*/
 .mejs-sd .mejs-controls {
   background: #e87cbb;
-  height: 35px;
+  height: 25px;
 }
 
 /*time*/
@@ -26,3 +26,4 @@
 .mejs-sd .mejs-time-rail .mejs-time-current {
   background: #5c62f5;
 }
+
