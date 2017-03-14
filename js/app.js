@@ -27,10 +27,12 @@ function highlightNextLine (id) {
 // on click jump to time 
 function playVidOfHiLitedCap (id, time) {
   id.addEventListener('click', () => {
-      for(i = 0; i < myList.length; i += 1) {
+      for(let i = 0; i < myList.length; i += 1) {
       let span = myList[i];
+      //find span that is highlighted and return to original font color
       if (span.style.color = "#FFB90F") {
         span.style.color = "#384047"; 
+      //set video time to beginning time of video that corresponds to span that is clicked
         video.currentTime = time;
       }
       };
@@ -49,6 +51,7 @@ video.ontimeupdate = function() {
   } else if(time > 11.28 && time <= 13.96) {
     highlightNextLine(cap4);
   } else if(time > 13.97 && time <= 17.94) {
+    //special code because previousSiblingElement doesn't work for first span in paragraph
     cap4.style.color = "#384047";
     cap5.style.color = "#FFB90F";
   } else if(time > 17.95 && time <= 22.37) {
@@ -64,6 +67,7 @@ video.ontimeupdate = function() {
   } else if(time > 39.44 && time <= 41.19) {
     highlightNextLine(cap11);
   } else if(time > 42.35 && time <= 46.30) {
+    //special code because previousSiblingElement doesn't work for first span in paragraph
     cap11.style.color = "#384047";
     cap12.style.color ="#FFB90F";
   } else if(time > 43.61 && time <= 49.27) {

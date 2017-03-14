@@ -14,15 +14,19 @@ body {
   margin: 0;
   background: #fff;
 }
+
+.video {
+  max-width: 100%;
+}
+
 .transcript-container p {
   line-height: 1.75em;
   color: #384047;
   padding: 0 20px;
-
 }
-
-.video {
-  max-width: 100%;
+  
+.transcript-container p span {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
