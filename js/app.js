@@ -30,7 +30,7 @@ function playVidOfHiLitedCap (id, time) {
       for(let i = 0; i < myList.length; i += 1) {
       let span = myList[i];
       //find span that is highlighted and return to original font color
-      if (span.style.color = "#FFB90F") {
+      if (span.style.color === "#FFB90F") {
         span.style.color = "#384047"; 
       //set video time to beginning time of video that corresponds to span that is clicked
         video.currentTime = time;
