@@ -24,6 +24,14 @@ function highlightNextLine (id) {
   id.style.color = "#FFB90F";
 } 
 
+//loop through spans and return to original font color
+function unHiLiteSpan () {
+  for(let i = 0; i < myList.length; i += 1) {
+      let span = myList[i];
+        span.style.color = "#384047"; 
+  }
+}
+
 // on click jump to time 
 function playVidOfHiLitedCap (id, time) {
   id.addEventListener('click', () => {
@@ -31,7 +39,7 @@ function playVidOfHiLitedCap (id, time) {
       let span = myList[i];
       //find span that is highlighted and return to original font color
       if (span.style.color === "#FFB90F") {
-        span.style.color = "#384047"; 
+        span.style.color = "#384047";
       //set video time to beginning time of video that corresponds to span that is clicked
         video.currentTime = time;
       }
@@ -41,46 +49,48 @@ function playVidOfHiLitedCap (id, time) {
                       
 // highlight section of caption that corresponds with video
 video.ontimeupdate = function() {
-  let time = video.currentTime;
-  if (time > 0.24 && time <= 4.13) {
-    cap1.style.color = "#FFB90F";
-  } else if(time > 4.13 && time <= 7.535) {
-    highlightNextLine(cap2);
-  } else if(time > 7.536 && time <= 11.27) {
-    highlightNextLine(cap3);
-  } else if(time > 11.28 && time <= 13.96) {
-    highlightNextLine(cap4);
-  } else if(time > 13.97 && time <= 17.94) {
-    //special code because previousSiblingElement doesn't work for first span in paragraph
-    cap4.style.color = "#384047";
-    cap5.style.color = "#FFB90F";
-  } else if(time > 17.95 && time <= 22.37) {
-    highlightNextLine(cap6);
-  } else if(time > 22.38 && time <= 26.88) {
-    highlightNextLine(cap7);
-  } else if(time > 26.89 && time <= 30.92) {
-    highlightNextLine(cap8);
-  } else if(time > 32.10 && time <= 34.73) {
-    highlightNextLine(cap9);
-  } else if(time > 34.746 && time <= 39.43) {
-    highlightNextLine(cap10);
-  } else if(time > 39.44 && time <= 41.19) {
-    highlightNextLine(cap11);
-  } else if(time > 42.35 && time <= 46.30) {
-    //special code because previousSiblingElement doesn't work for first span in paragraph
-    cap11.style.color = "#384047";
-    cap12.style.color ="#FFB90F";
-  } else if(time > 43.61 && time <= 49.27) {
-    highlightNextLine(cap13);
-  } else if(time > 49.28 && time <= 53.76) {
-    highlightNextLine(cap14);
-  } else if(time > 53.77 && time <= 57.78) {
-    highlightNextLine(cap15);
-  } else if(time > 57.79 && time <= 58.99) {
-    highlightNextLine(cap16);
-  } else if(time > 59.00) {
-    cap16.style.color = "#384047";
-  }
+    let time = video.currentTime;
+    unHiLiteSpan();
+      if (time > 0.24 && time <= 4.13) {
+        cap1.style.color = "#FFB90F";
+      } else if(time > 4.13 && time <= 7.535) {
+        highlightNextLine(cap2);
+      } else if(time > 7.536 && time <= 11.27) {
+        highlightNextLine(cap3);
+      } else if(time > 11.28 && time <= 13.96) {
+        highlightNextLine(cap4);
+      } else if(time > 13.97 && time <= 17.94) {
+        //special code because previousSiblingElement doesn't work for first span in paragraph
+        cap4.style.color = "#384047";
+        cap5.style.color = "#FFB90F";
+      } else if(time > 17.95 && time <= 22.37) {
+        highlightNextLine(cap6);
+      } else if(time > 22.38 && time <= 26.88) {
+        highlightNextLine(cap7);
+      } else if(time > 26.89 && time <= 30.92) {
+        highlightNextLine(cap8);
+      } else if(time > 32.10 && time <= 34.73) {
+        highlightNextLine(cap9);
+      } else if(time > 34.746 && time <= 39.43) {
+        highlightNextLine(cap10);
+      } else if(time > 39.44 && time <= 41.19) {
+        highlightNextLine(cap11);
+      } else if(time > 42.35 && time <= 46.30) {
+        //special code because previousSiblingElement doesn't work for first span in paragraph
+        cap11.style.color = "#384047";
+        cap12.style.color ="#FFB90F";
+      } else if(time > 43.61 && time <= 49.27) {
+        highlightNextLine(cap13);
+      } else if(time > 49.28 && time <= 53.76) {
+        highlightNextLine(cap14);
+      } else if(time > 53.77 && time <= 57.78) {
+        highlightNextLine(cap15);
+      } else if(time > 57.79 && time <= 58.99) {
+        highlightNextLine(cap16);
+      } else if(time > 59.00) {
+        cap16.style.color = "#384047";
+      }
+//  }
 };
 
 // play appropriate time of video when caption clicked
